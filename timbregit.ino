@@ -1,3 +1,5 @@
+//prueba de subida a git
+
 #include <NTPClient.h>
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
@@ -77,7 +79,7 @@ void loop()
     {
       if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
       {
-        timbrar();
+        tocar();
       }
     }
   }
@@ -88,7 +90,7 @@ void loop()
     {
       if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
       {
-        timbrar1();
+        tocar1();
       }
     }
   }
@@ -96,6 +98,7 @@ void loop()
   
  
   delay(1000);
+  delay(2000);
 
   
   
@@ -104,14 +107,14 @@ void loop()
 
 }
 
-void timbrar()
+void tocar()
 {
  digitalWrite(timbre, HIGH);
  delay(tiempoTimbre);
  digitalWrite(timbre, LOW);
 }
 
-void timbrar1()
+void tocar1()
 {
  digitalWrite(timbre, HIGH);
  delay(tiempoTimbre1);
