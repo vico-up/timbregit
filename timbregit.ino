@@ -17,9 +17,9 @@ String diasSemana[7] = {"Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Vi
 int diaInt;     //Guarda el dia en entero 0-6 respectivamente
 String diaActual; //transforma dia en enteros en string
 
-const int timbre = 5;   //pin de salida para activar el rele
-int tiempoTimbre = 5000;
-int tiempoTimbre1 = 10000;
+const int timbre = 2;   //pin de salida para activar el rele
+int tiempoTimbre = 15000;
+int tiempoTimbre1 = 20000;
 
 int hora;
 int minuto;
@@ -28,8 +28,8 @@ int segundo;
 
 /////////////////////Horario////////////////////
 
-int h1 = 22; int m1 = 37; int se1 = 00;
-int h2 = 22; int m2 = 38; int se2 = 00;
+int h1 = 23; int m1 = 27; int se1 = 00;
+int h2 = 23; int m2 = 28; int se2 = 00;
 int h3 = 9; int m3 = 00; int se3 = 00;
 int h4 = 9; int m4 = 20; int se4 = 00;
 int h5 = 9; int m5 = 30; int se5 = 00;
@@ -98,7 +98,7 @@ void loop()
   
  
   delay(1000);
-  delay(2000);
+  
 
   
   
