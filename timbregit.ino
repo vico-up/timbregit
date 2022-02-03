@@ -1,4 +1,4 @@
-//prueba de subida a git
+
 
 #include <NTPClient.h>
 #include <ESP8266WiFi.h>
@@ -17,7 +17,7 @@ String diasSemana[7] = {"Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Vi
 int diaInt;     //Guarda el dia en entero 0-6 respectivamente
 String diaActual; //transforma dia en enteros en string
 
-const int timbre = 2;   //pin de salida para activar el rele
+const int timbre = 5;   //pin de salida para activar el rele
 int tiempoTimbre = 15000;
 int tiempoTimbre1 = 20000;
 
@@ -28,8 +28,8 @@ int segundo;
 
 /////////////////////Horario////////////////////
 
-int h1 = 23; int m1 = 27; int se1 = 00;
-int h2 = 23; int m2 = 28; int se2 = 00;
+int h1 = 16; int m1 = 45; int se1 = 00;
+int h2 = 16; int m2 = 47; int se2 = 00;
 int h3 = 9; int m3 = 00; int se3 = 00;
 int h4 = 9; int m4 = 20; int se4 = 00;
 int h5 = 9; int m5 = 30; int se5 = 00;
@@ -73,38 +73,35 @@ void loop()
   Serial.print(", ");
   Serial.println(timeClient.getFormattedTime());
 
+  // tocar 2
+
   if(timeClient.isTimeSet())
   {
-    if(hora == h1 && minuto == m1 && segundo == se1)
+    if(hora == h1 && minuto == m1)
     {
       if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
       {
+        Serial.println("ok");
         tocar();
       }
     }
   }
 
+  //tocar 2
+
   if(timeClient.isTimeSet())
   {
-    if(hora == h2 && minuto == m2 && segundo == se2)
+    if(hora == h2 && minuto == m2)
     {
       if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
       {
+        Serial.println("ok");
         tocar1();
       }
     }
   }
 
-  
- 
   delay(1000);
-  
-
-  
-  
-  
-
-
 }
 
 void tocar()
@@ -112,6 +109,7 @@ void tocar()
  digitalWrite(timbre, HIGH);
  delay(tiempoTimbre);
  digitalWrite(timbre, LOW);
+ delay(60000);
 }
 
 void tocar1()
@@ -119,4 +117,5 @@ void tocar1()
  digitalWrite(timbre, HIGH);
  delay(tiempoTimbre1);
  digitalWrite(timbre, LOW);
+ delay(60000);
 }
