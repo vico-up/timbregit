@@ -18,8 +18,8 @@ int diaInt;     //Guarda el dia en entero 0-6 respectivamente
 String diaActual; //transforma dia en enteros en string
 
 const int timbre = 5;   //pin de salida para activar el rele
-int tiempoTimbre = 15000;
-int tiempoTimbre1 = 20000;
+int tiempoTimbre = 2500;
+int tiempoTimbre1 = 5500;
 
 int hora;
 int minuto;
@@ -28,18 +28,14 @@ int segundo;
 
 /////////////////////Horario////////////////////
 
-int h1 = 16; int m1 = 45; int se1 = 00;
-int h2 = 16; int m2 = 47; int se2 = 00;
-int h3 = 9; int m3 = 00; int se3 = 00;
-int h4 = 9; int m4 = 20; int se4 = 00;
-int h5 = 9; int m5 = 30; int se5 = 00;
-int h6 = 10; int m6 = 00; int se6 = 00;
-int h7 = 10; int m7 = 30; int se7 = 00;
-int h8 = 11; int m8 = 00; int se8 = 00;
-int h9 = 11; int m9 = 30; int se9 = 00;
-int h10 = 11; int m10 = 40; int se10 = 00;
-int h11 = 12; int m11 = 00; int se11 = 00;
-int h12 = 12; int m12 = 20; int se12 = 00;
+int h1 = 8; int m1 = 00; int se1 = 00;
+int h2 = 9; int m2 = 00; int se2 = 00;
+int h3 = 9; int m3 = 20; int se3 = 00;
+int h4 = 10; int m4 = 00; int se4 = 00;
+int h5 = 10; int m5 = 30; int se5 = 00;
+int h6 = 11; int m6 = 00; int se6 = 00;
+int h7 = 12; int m7 = 00; int se7 = 00;
+int h8 = 12; int m8 = 20; int se8 = 00;
 
 
 void setup() 
@@ -73,7 +69,7 @@ void loop()
   Serial.print(", ");
   Serial.println(timeClient.getFormattedTime());
 
-  // tocar 2
+  // tocar 1
 
   if(timeClient.isTimeSet())
   {
@@ -82,7 +78,7 @@ void loop()
       if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
       {
         Serial.println("ok");
-        tocar();
+        tocar1();
       }
     }
   }
@@ -96,12 +92,97 @@ void loop()
       if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
       {
         Serial.println("ok");
+        tocar();
+      }
+    }
+  }
+
+   //tocar 3
+
+  if(timeClient.isTimeSet())
+  {
+    if(hora == h3 && minuto == m3)
+    {
+      if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
+      {
+        Serial.println("ok");
+        tocar();
+      }
+    }
+  }
+
+   //tocar 4
+
+  if(timeClient.isTimeSet())
+  {
+    if(hora == h4 && minuto == m4)
+    {
+      if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
+      {
+        Serial.println("ok");
         tocar1();
       }
     }
   }
 
-  delay(1000);
+   //tocar 5
+
+  if(timeClient.isTimeSet())
+  {
+    if(hora == h5 && minuto == m5)
+    {
+      if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
+      {
+        Serial.println("ok");
+        tocar1();
+      }
+    }
+  }
+
+   //tocar 6
+
+  if(timeClient.isTimeSet())
+  {
+    if(hora == h6 && minuto == m6)
+    {
+      if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
+      {
+        Serial.println("ok");
+        tocar1();
+      }
+    }
+  }
+
+   //tocar 7
+
+  if(timeClient.isTimeSet())
+  {
+    if(hora == h7 && minuto == m7)
+    {
+      if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
+      {
+        Serial.println("ok");
+        tocar1();
+      }
+    }
+  }
+
+   //tocar 8
+
+  if(timeClient.isTimeSet())
+  {
+    if(hora == h8 && minuto == m8)
+    {
+      if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
+      {
+        Serial.println("ok");
+        tocar1();
+      }
+    }
+  }
+
+delay(1000);
+
 }
 
 void tocar()
