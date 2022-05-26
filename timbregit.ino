@@ -18,8 +18,8 @@ int diaInt;     //Guarda el dia en entero 0-6 respectivamente
 String diaActual; //transforma dia en enteros en string
 
 const int timbre = 5;   //pin de salida para activar el rele
-int tiempoTimbre = 2500;
-int tiempoTimbre1 = 5500;
+int tiempoTimbre = 2200;
+int tiempoTimbre1 = 5000;
 
 int hora;
 int minuto;
@@ -28,9 +28,9 @@ int segundo;
 
 /////////////////////Horario////////////////////
 
-int h1 = 8; int m1 = 00; int se1 = 00;
-int h2 = 9; int m2 = 00; int se2 = 00;
-int h3 = 9; int m3 = 20; int se3 = 00;
+int h1 = 8; int m1 = 30; int se1 = 00;
+int h2 = 9; int m2 = 20; int se2 = 00;
+int h3 = 9; int m3 = 30; int se3 = 00;
 int h4 = 10; int m4 = 00; int se4 = 00;
 int h5 = 10; int m5 = 30; int se5 = 00;
 int h6 = 11; int m6 = 00; int se6 = 00;
@@ -106,7 +106,7 @@ void loop()
       if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
       {
         Serial.println("ok");
-        tocar();
+        tocar1();
       }
     }
   }
@@ -120,7 +120,7 @@ void loop()
       if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
       {
         Serial.println("ok");
-        tocar1();
+        tocar();
       }
     }
   }
