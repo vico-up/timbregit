@@ -28,12 +28,12 @@ int segundo;
 
 /////////////////////Horario////////////////////
 
-int h1 = 8; int m1 = 30; int se1 = 00;
-int h2 = 9; int m2 = 20; int se2 = 00;
-int h3 = 9; int m3 = 30; int se3 = 00;
-int h4 = 10; int m4 = 00; int se4 = 00;
-int h5 = 10; int m5 = 30; int se5 = 00;
-int h6 = 11; int m6 = 00; int se6 = 00;
+int h1 = 9; int m1 = 00; int se1 = 00;
+int h2 = 9; int m2 = 30; int se2 = 00;
+int h3 = 10; int m3 = 00; int se3 = 00;
+int h4 = 10; int m4 = 30; int se4 = 00;
+int h5 = 11; int m5 = 00; int se5 = 00;
+int h6 = 11; int m6 = 20; int se6 = 00;
 int h7 = 12; int m7 = 00; int se7 = 00;
 int h8 = 12; int m8 = 20; int se8 = 00;
 
@@ -92,7 +92,7 @@ void loop()
       if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
       {
         Serial.println("ok");
-        tocar();
+        tocar1();
       }
     }
   }
@@ -106,7 +106,7 @@ void loop()
       if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
       {
         Serial.println("ok");
-        tocar1();
+        tocar();
       }
     }
   }
@@ -120,7 +120,7 @@ void loop()
       if(diaInt == 1 || diaInt == 2 || diaInt == 3 || diaInt == 4 || diaInt == 5)
       {
         Serial.println("ok");
-        tocar();
+        tocar1();
       }
     }
   }
